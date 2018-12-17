@@ -1,1 +1,14 @@
 <h1>Most Dangerous Day</h1>
+
+<%= @facade.start_date %> - <%= @facade.end_date %><br><br>
+<div class="result">
+  <%= @facade.most_dangerous_date %>
+
+  <% @facade.dangerous_asteroids.each do |asteroid| %>
+    <ul class="asteroid">
+      <li>Name: <%= asteroid.name %></li>
+      <li>NEO Reference ID: <%= asteroid.neo_reference_id %></li>
+      <br>
+    </ul>
+  <% end %>
+</div>
