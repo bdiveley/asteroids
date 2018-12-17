@@ -29,4 +29,11 @@ describe Day do
 
     expect(total).to eq(1)
   end
+
+  it 'can find all dangerous asteroids' do
+    @day.add_asteroids(@data)
+    result = @day.worst_asteroids
+
+    expect(result.count).to eq(1)
+  end
 end

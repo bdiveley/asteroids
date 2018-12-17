@@ -2,6 +2,7 @@ require 'rails_helper'
 
 feature'user visits the root_path' do
   scenario 'enters a start and end date and click submit' do
+    stub_request(:get, "https://api.nasa.gov/neo/rest/v1/feed?api_key=#{ENV["NASA_KEY"]}&end_date=2018-01-07&start_date=2018-01-01").to_return(body: File.read('./spec/fixtures/dates_of_asteroids.json'))
 
     visit root_path
 
