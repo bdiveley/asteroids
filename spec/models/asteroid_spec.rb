@@ -16,6 +16,6 @@ describe Asteroid do
 
     expect(@asteroid.name).to eq(name)
     expect(@asteroid.neo_reference_id).to eq(neo_reference_id)
-    expect(@asteroid.dangerous).to eq(true)
+    expect(@asteroid.is_potentially_hazardous_asteroid).to eq(true)
   end
 end

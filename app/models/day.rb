@@ -15,13 +15,13 @@ class Day
 
   def count_dangerous_asteroids
     @asteroids.count do |asteroid|
-      asteroid.dangerous == true
+      asteroid.is_potentially_hazardous_asteroid == true
     end
   end
 
   def worst_asteroids
     @asteroids.find_all do |asteroid|
-      asteroid.dangerous == true
+      asteroid.is_potentially_hazardous_asteroid == true
     end
   end
 end
